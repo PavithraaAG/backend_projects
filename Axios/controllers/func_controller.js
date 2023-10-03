@@ -3,8 +3,6 @@ const comment_model = require('../models/comment_model')
 const utils = require('../utils/utils');
 const axios = require('axios');
 
-
-
 exports.get_comments = async (req, res) => {
     let response = await utils.sendRequest("comments")
     if (response?.error) {
