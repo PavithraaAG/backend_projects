@@ -18,7 +18,7 @@ exports.get_comments = async (req, res) => {
         let user = val.user
         console.log(commentId)
         let data = await comment_model.find({ commentId: commentId })
-        console.log("hi", data)
+        // console.log("hi", data)
         if (data.length === 0) {
             await comment_model.create({
                 commentId: commentId,
